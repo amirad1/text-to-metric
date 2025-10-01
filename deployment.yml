@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: text-to-metric
+spec:
+  selector:
+    matchLabels:
+      app: text-to-metric
+  template:
+    metadata:
+      labels:
+        app: text-to-metric
+    spec:
+      containers:
+      - name: text-to-metric
+        image: <>
+        ports:
+        - containerPort: 9097
+      - env:
+          - name: FILE
+            value: "/<>"
+          - name: INTERVAL 
+            value: "2"
+          - name: METRIC_NAME
+            value: "<>"
+          - name: LABEL_NAME
+            value: "<>"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: text-to-metric
+spec:
+  selector:
+    app: text-to-metric
+  ports:
+  - port: 9098
+    targetPort: 9098
