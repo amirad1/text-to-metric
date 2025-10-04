@@ -18,13 +18,23 @@ spec:
         - containerPort: 9097
       - env:
           - name: FILE
-            value: "/<>"
+            value: "<PATH and NAME of file you want to track>"
           - name: INTERVAL 
             value: "2"
           - name: METRIC_NAME
             value: "<>"
           - name: LABEL_NAME
             value: "<>"
+        volumeMounts:
+        - mountPath: <path of file you want to track in the container>
+          name: <volume-name>
+          readOnly: true
+      volumes:
+      - hostPath:
+          path: <path of file you want to track in the running host>
+          type: DirectoryOrCreate
+        name: <volume-name>
+
 ---
 apiVersion: v1
 kind: Service
