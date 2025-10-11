@@ -11,3 +11,4 @@ docker push <your-registry/repo:tag>
 
 ## Deploying the image
 
+<img width="508" height="459" alt="image" src="https://github.com/user-attachments/assets/1e5b499e-bff7-415d-9001-a9c903f8432a" />
