@@ -11,4 +11,7 @@ docker push <your-registry/repo:tag>
 
 ## Deploying the image
 
+In in the deployment.yml file you have to add parameters of container like below
+write your image name and container parameters and run kubectl apply -f deployment.yml
+
 <img width="508" height="459" alt="image" src="https://github.com/user-attachments/assets/1e5b499e-bff7-415d-9001-a9c903f8432a" />
