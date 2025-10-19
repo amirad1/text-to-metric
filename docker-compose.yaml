@@ -1,0 +1,11 @@
+version: "3"
+services:
+  text-to-metric:
+    image: <your image name>
+    ports:
+      - "9098:9098"
+    environment:
+      FILE: "<file path>"
+      INTERVAL: "<>"
+      METRIC_NAME: "<>"
+      LABEL_NAME: "<>"
