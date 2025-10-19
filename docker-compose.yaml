@@ -9,3 +9,5 @@ services:
       INTERVAL: "<>"
       METRIC_NAME: "<>"
       LABEL_NAME: "<>"
+    volumes:
+    - /<you-file-in-host>/:<file path>
